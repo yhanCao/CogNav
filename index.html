@@ -75,7 +75,7 @@
 }
 
 ul {
-  text-align: left; /* 确保文本左对齐 */
+  text-align: justify; /* 确保文本左对齐 */
   list-style-position: inside; /* 列表标记与文本对齐 */
   font-size: 16px;
   list-style-type: circle; /* 使用圆形作为项目符号 */
@@ -144,7 +144,7 @@ ul {
                 </span>
 
                 <!-- Supplementary PDF link -->
-<!--                 <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://www.youtube.com/watch?v=IHkDuJZV0I8" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -188,43 +188,89 @@ ul {
   </div>
 </section>
 
-
-
 <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <div class="text-image-container title is-3">
+              <div>
+                <img src="static/images/logo.png" alt="示例图片" width="45">
+              </div>
+              <div class="text">
+                  <p>Contribution</p>
+              </div>
+            </div>
+            </h2>
+            <ul>
+              <li><b>CogNav is the first attempt of cognitive process modeling for ObjectNav via exploiting the commonsense and spatial reasoning capability of LLMs.</b></li>
+              <li><b>CogNav designs the cognitive states and the prompts for grounded reasoning of state transitions with an LLM.</b></li>
+              <li><b>CogNav builds a heterogeneous cognitive map representation which is constructed online and can be corrected through prompting an LLM to ensure high map accuracy.</b></li>
+              <li><b>CogNav achieves state-of-the-art (SOTA) performance in both simulated and real-world environments, and exhibits strong generalizability on unseen scenarios.</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero is-small">
 
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-
-      <h2>
-      <!-- <h2 class=""> <img src="static/images/highlight_logo.png" width="50"> Highlights</h2> -->
-      <div class="text-image-container title is-3">
-        <div>
-          <img src="static/images/highlight_logo.png" alt="示例图片" width="50">
-      </div>
-        <div class="text">
-            <p>Highlights</p>
+      <div class="column is-four-fifths"></div>
+        <h2>
+        <h2 class=""> <img src="static/images/highlight_logo.png" width="50"> Highlights</h2>
+        <div class="text-image-container title is-3">
+          <div>
+            <img src="static/images/highlight_logo.png" alt="示例图片" width="50">
+          </div>
+          <div class="text">
+              <p>Highlights</p>
+          </div>
         </div>
-    </div>
-  </h2>
-
-
-
-      <ul>
-        <li><b>CogNav is the first attempt of cognitive process modeling for ObjectNav via exploiting the commonsense and spatial reasoning capability of LLMs.</b></li>
-        <li><b>CogNav designs the cognitive states and the prompts for grounded reasoning of state transitions with an LLM.</b></li>
-        <li><b>CogNav builds a heterogeneous cognitive map representation which is constructed online and can be corrected through prompting an LLM to ensure high map accuracy.</b></li>
-        <li><b>CogNav achieves state-of-the-art (SOTA) performance in both simulated and real-world environments, and exhibits strong generalizability on unseen scenarios.</b></li>
-      </ul>
-
+        </h2>
+        <ul>
+          <li><b>CogNav is the first attempt of cognitive process modeling for ObjectNav via exploiting the commonsense and spatial reasoning capability of LLMs.</b></li>
+          <li><b>CogNav designs the cognitive states and the prompts for grounded reasoning of state transitions with an LLM.</b></li>
+          <li><b>CogNav builds a heterogeneous cognitive map representation which is constructed online and can be corrected through prompting an LLM to ensure high map accuracy.</b></li>
+          <li><b>CogNav achieves state-of-the-art (SOTA) performance in both simulated and real-world environments, and exhibits strong generalizability on unseen scenarios.</b></li>
+        </ul>
+      </div>
 
     </div>
 
   </div>
   
+</section> -->
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3"> Demos of CogNav in Real-world Environment</h2>
+      <!-- <h2 class="title is-5"> (R2R training split ->  RxR validation unseen split )</h2> -->
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
+
+        <div class="item item-video16">
+          <video poster="" id="video16" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/real_video_caption/真机-bed.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video17">
+          <video poster="" id="video17" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/real_video_caption/真机-cup.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      
+      </div>
+    </div>
+  </div>
 </section>
-
-
-
 
 
 
@@ -378,15 +424,15 @@ ul {
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <div class="content">
-            <h2 class="title is-3">Cognitive Map Prompting</h2>
-            <img src="static/images/cognitive_map.png" alt="CogNav" class="center-image blend-img-background">
+            <h2 class="title is-3">Examples of Cognitive State Transition</h2>
+            <img src="static/images/visualization.png" alt="CogNav" class="center-image blend-img-background">
             <div class="level-set has-text-justified">
-              <p class="has-text-justified">
+              <!-- <p class="has-text-justified">
                 <b>We encode knowledge from the cognitive map by constructing landmark-centered prompts encompassing both scene and agent information.</b>
               </p>
-              <p class="has-text-justified">
+              <p class="has-text-justified"> -->
                 <!-- <b>We initialize the encoders and Vicuna-7B using pre-trained weights, and our model requires only one epoch for the training process.</b> -->
-              </p>
+              <!-- </p> -->
             </div>
           </div>
         </div>
@@ -482,7 +528,7 @@ ul {
 <!-- End Video carousel 1 Caption -->
 
 <!-- Image carousel 2 R2R -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
       <h2 class="title is-3">An Example of Cognitive State Transition</h2>
@@ -496,7 +542,7 @@ ul {
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End image carousel 2 R2R -->
 
 
@@ -563,30 +609,7 @@ ul {
 
 
 <!-- Image carousel 3 RxR -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3"> Results of CogNav in Real-world Environment</h2>
-      <!-- <h2 class="title is-5"> (R2R training split ->  RxR validation unseen split )</h2> -->
-      <div id="results-carousel-teaser1" class="carousel results-carousel">
 
-        <div class="item item-video16">
-          <video poster="" id="video16" autoplay playsinline controls muted  height="100%">
-            <source src="static/videos/real_video_caption/真机-bed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video17">
-          <video poster="" id="video17" autoplay playsinline controls muted  height="100%">
-            <source src="static/videos/real_video_caption/真机-cup.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      
-      </div>
-    </div>
-  </div>
-</section>
 <!-- End image carousel 3 RxR -->
 
 
