@@ -206,9 +206,9 @@ ul {
             </div>
             </h2>
             <ul>
-              <li><b>CogNav is the first attempt of cognitive process modeling for ObjectNav via exploiting the commonsense and spatial reasoning capability of LLMs.</b></li>
-              <li><b>CogNav designs the cognitive states and the prompts for grounded reasoning of state transitions with an LLM.</b></li>
-              <li><b>CogNav builds a heterogeneous cognitive map representation which is constructed online and can be corrected through prompting an LLM to ensure high map accuracy.</b></li>
+              <li><b>CogNav is an effective cognitive process modeling for ObjectNav via exploiting the commonsense and spatial reasoning capability of LLMs.</b></li>
+              <li><b>CogNav designs the fine-grained cognitive states and the prompts for grounded reasoning of state transitions with an LLM.</b></li>
+              <li><b>CogNav builds a heterogeneous cognitive map representation that is constructed online and can be corrected by prompting an LLM to ensure high map accuracy.</b></li>
               <li><b>CogNav achieves state-of-the-art performance in both simulated, and exhibits strong generalizability in real-world environments.</b></li>
             </ul>
           </div>
@@ -268,7 +268,12 @@ ul {
             type="video/mp4">
           </video>
         </div>
-      
+        <div class="item item-video17">
+          <video poster="" id="video17" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/real_video_caption/真机-potato.mp4"
+            type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </div>
@@ -362,7 +367,7 @@ ul {
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Object goal navigation (ObjectNav) is a fundamental task of embodied AI that requires the agent to find a target object in unseen environments. This task is particularly challenging as it demands both perceptual and cognitive processes for effective perception and decision-making. While perception has gained significant progress powered by the rapidly developed visual foundation models, the progress on the cognitive side remains limited to either implicitly learning from massive navigation demonstrations or explicitly leveraging pre-defined heuristic rules.Inspired by neuroscientific evidence that humans consistently update their cognitive states while searching for objects in unseen environments, we present CogNav, which attempts to model this cognitive process with the help of large language models. Specifically, we model the cognitive process with a finite state machine composed of cognitive states ranging from exploration to identification. The transitions between the states are determined by a large language model based on an online built heterogeneous cognitive map containing spatial and semantic information of the scene being explored.Extensive experiments on both synthetic and real-world environments demonstrate that our cognitive modeling significantly improves ObjectNav efficiency, with human-like navigation behaviors. In an open-vocabulary and zero-shot setting, our method advances the SOTA of the HM3D benchmark from 69.3% to 87.2%. The code and data will be released. 
+            Object goal navigation (ObjectNav) is a fundamental task in embodied AI, requiring an agent to locate a target object in previously unseen environments. This task is particularly challenging because it requires both perceptual and cognitive processes, including object recognition and decision-making. While substantial advancements in perception have been driven by the rapid development of visual foundation models, progress on the cognitive aspect remains constrained, primarily limited to either implicit learning through simulator rollouts or explicit reliance on predefined heuristic rules. Inspired by neuroscientific findings demonstrating that humans maintain and dynamically update fine-grained cognitive states during object search tasks in novel environments, we propose CogNav, a framework designed to mimic this cognitive process using large language models. Specifically, we model the cognitive process using a finite state machine comprising fine-grained cognitive states, ranging from exploration to identification. Transitions between states are determined by a large language model based on a dynamically constructed heterogeneous cognitive map, which contains spatial and semantic information about the scene being explored. Extensive evaluations on the HM3D, MP3D, and RoboTHOR benchmarks demonstrate that our cognitive process modeling significantly improves the success rate of ObjectNav at least by relative 14% over the state-of-the-arts. The code has been submitted and will be released upon acceptance.
           </p>
         </div>
       </div>
@@ -411,7 +416,6 @@ ul {
             <div class="level-set has-text-justified">
               <p class="has-text-justified">
                 <b>The overview of CogNav.</b> Our method takes a posed RGB-D sequence as input and incrementally constructs an online cognitive map, comprising a scene graph, a landmark graph, and an occupancy map. We then perform cognitive map prompting by encoding cognitive information and goal object into a text prompt used to query the LLM to determine the next cognitive state. Based on the state, the LLM is queried again to select a landmark to guide the robot. A deterministic local planner is used to generate a path to the selected landmark.
-              </p>
             </div>
           </div>
         </div>
